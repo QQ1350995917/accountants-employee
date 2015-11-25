@@ -56,6 +56,7 @@
             android:scrollbars="none"
             android:verticalSpacing="10dp"
             android:horizontalSpacing="10dp"
+            android:listSelector="@color/color_transparent"
             android:cacheColorHint="@color/color_transparent">
     </GridView>
 

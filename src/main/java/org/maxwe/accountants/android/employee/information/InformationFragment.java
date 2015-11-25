@@ -1,5 +1,6 @@
 package org.maxwe.accountants.android.employee.information;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -7,6 +8,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
 import org.maxwe.accountants.android.employee.R;
+import org.maxwe.accountants.android.employee.settings.SettingsActivity;
 
 import java.util.LinkedList;
 
@@ -15,7 +17,7 @@ import java.util.LinkedList;
  * Email: www.dingpengwei@foxmail.com www.dingpegnwei@gmail.com
  * Description: 我的信息
  */
-public class InformationFragment extends Fragment implements AdapterView.OnItemClickListener {
+public class InformationFragment extends Fragment implements View.OnClickListener, AdapterView.OnItemClickListener {
     private static LinkedList<InformationEntity> informationEntities = new LinkedList<InformationEntity>();
     static {
         informationEntities.add(new InformationEntity("我的接单",R.drawable.temp_icon_my_order_helper,""));
@@ -59,11 +61,12 @@ public class InformationFragment extends Fragment implements AdapterView.OnItemC
         TextView titleName = (TextView) informationView.findViewById(R.id.title_name);
         titleName.setVisibility(View.VISIBLE);
         titleName.setText(R.string.string_tab_bar_information);
-        ImageButton settingSearch = (ImageButton) informationView.findViewById(R.id.title_setting);
-        settingSearch.setVisibility(View.VISIBLE);
-        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) settingSearch.getLayoutParams();
+        ImageButton setting = (ImageButton) informationView.findViewById(R.id.title_setting);
+        setting.setVisibility(View.VISIBLE);
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) setting.getLayoutParams();
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
-        settingSearch.setLayoutParams(layoutParams);
+        setting.setLayoutParams(layoutParams);
+        setting.setOnClickListener(this);
 
         GridView information_container = (GridView) informationView.findViewById(R.id.information_container);
         information_container.setAdapter(new InformationAdapter(this.getActivity(),informationEntities));
@@ -75,6 +78,12 @@ public class InformationFragment extends Fragment implements AdapterView.OnItemC
     public void onSaveInstanceState(Bundle outState) {
         outState.putString("WORKAROUND_FOR_BUG_19917_KEY",  "WORKAROUND_FOR_BUG_19917_VALUE");
         super.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent settingIntent = new Intent(this.getActivity(),SettingsActivity.class);
+        this.startActivity(settingIntent);
     }
 
     @Override

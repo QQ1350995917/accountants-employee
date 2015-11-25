@@ -4,5 +4,13 @@
     <string name="string_tab_bar_message">业内消息</string>
     <string name="string_tab_bar_workspace">我的工作台</string>
     <string name="string_tab_bar_information">我的信息</string>
+    <string name="string_password_modify">修改密码</string>
+    <string name="string_clean_cache">缓存清理</string>
+    <string name="string_update_version">检查更新</string>
+    <string name="string_current_version">当前版本：</string>
+    <string name="string_qr">移动客户端下载二维码</string>
+    <string name="string_about">关于</string>
+    <string name="string_logout">退出当前账号</string>
+
 
 </resources>
