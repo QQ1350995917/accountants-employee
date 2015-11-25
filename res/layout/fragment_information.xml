@@ -4,8 +4,60 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
         >
-
     <include layout="@layout/include_title"></include>
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/temp_top_bg">
+        <ImageButton
+                android:id="@+id/fragment_user_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/user_local_default"
+                android:layout_margin="5dp"
+                android:textColor="@color/color_black"/>
+        <TextView
+                android:id="@+id/fragment_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fragment_user_image"
+                android:text="登录名：ZhangDaShan123"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_write"
+                android:layout_margin="5dp"/>
+
+        <TextView
+                android:id="@+id/fragment_login_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/fragment_user_image"
+                android:layout_below="@id/fragment_user_name"
+                android:text="用户名：张大山"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_write"
+                android:layout_margin="5dp"/>
+
+        <ImageButton
+                android:id="@+id/fragment_user_next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/icon_right"
+                android:background="@color/color_transparent"
+                android:layout_margin="10dp"
+                />
+    </RelativeLayout>
+
+    <GridView
+            android:id="@+id/information_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:numColumns="3"
+            android:scrollbars="none"
+            android:verticalSpacing="10dp"
+            android:horizontalSpacing="10dp"
+            android:cacheColorHint="@color/color_transparent">
+    </GridView>
 
 
 </LinearLayout>

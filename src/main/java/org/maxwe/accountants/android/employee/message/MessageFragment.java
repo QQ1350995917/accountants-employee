@@ -44,7 +44,6 @@ public class MessageFragment extends Fragment implements AdapterView.OnItemClick
         layoutParams.addRule(RelativeLayout.ALIGN_PARENT_RIGHT);
         titleSearch.setLayoutParams(layoutParams);
         Bundle data = getArguments();
-        Toast.makeText(getActivity(), data.getString("TEXT"), Toast.LENGTH_SHORT).show();
 
         ListView message_list_container = (ListView) messageView.findViewById(R.id.message_list_container);
         message_list_container.setAdapter(new MessageAdapter(this.getActivity(),messageEntities));
