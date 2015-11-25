@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <android.support.v4.view.ViewPager
+            android:id="@+id/act_main_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_write"
+            android:layout_above="@+id/act_main_tab_container"
+            >
+    </android.support.v4.view.ViewPager>
+
+    <RadioGroup
+            android:id="@+id/act_main_tab_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:background="@color/color_black"
+            >
+        <RadioButton
+                android:id="@+id/act_main_tab_bar_message"
+                android:drawableTop="@drawable/selector_tab_message"
+                android:text="@string/string_tab_bar_message"
+                style="@style/style_tab_bar"/>
+        <RadioButton
+                android:id="@+id/act_main_tab_bar_workspace"
+                android:drawableTop="@drawable/selector_tab_workspace"
+                android:text="@string/string_tab_bar_workspace"
+                style="@style/style_tab_bar"/>
+        <RadioButton
+                android:id="@+id/act_main_tab_bar_information"
+                android:drawableTop="@drawable/selector_tab_information"
+                android:text="@string/string_tab_bar_information"
+                style="@style/style_tab_bar"/>
+    </RadioGroup>
+
+</RelativeLayout>

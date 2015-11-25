@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/color_black"
+        >
+
+    <ImageButton
+            android:id="@+id/title_back"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/selector_title_back"
+            style="@style/style_title"/>
+
+    <TextView
+            android:id="@+id/title_name"
+            android:layout_alignParentLeft="true"
+            android:layout_toRightOf="@id/title_back"
+            style="@style/style_title"/>
+
+
+    <ImageButton
+            android:id="@+id/title_search"
+            android:layout_toLeftOf="@+id/title_menu"
+            android:src="@drawable/icon_search"
+            style="@style/style_title"/>
+
+
+    <ImageButton
+            android:id="@+id/title_menu"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/selector_title_menu"
+            style="@style/style_title"/>
+
+
+    <ImageButton
+            android:id="@+id/title_setting"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_setting"
+            style="@style/style_title"/>
+
+</RelativeLayout>
