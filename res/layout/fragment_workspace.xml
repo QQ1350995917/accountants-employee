@@ -7,6 +7,13 @@
 
     <include layout="@layout/include_title"></include>
 
+    <ListView
+            android:id="@+id/workspace_list_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:cacheColorHint="@color/color_transparent"/>
+
 
 
 
