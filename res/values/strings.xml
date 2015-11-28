@@ -11,6 +11,13 @@
     <string name="string_qr">移动客户端下载二维码</string>
     <string name="string_about">关于</string>
     <string name="string_logout">退出当前账号</string>
+    <string name="string_login">登录</string>
+    <string name="string_register">注册</string>
+    <string name="string_lost_password">忘记密码?</string>
+    <string name="string_login_username_hint">手机号/用户名/绑定邮箱</string>
+    <string name="string_login_password_hint">密码</string>
+    <string name="string_login_auth_hint">使用其他帐号登录</string>
+    <string name="string_login_change_account">切换帐号</string>
 
 
 </resources>

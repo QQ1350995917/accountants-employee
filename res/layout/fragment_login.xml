@@ -3,20 +3,142 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="#009587"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
         >
-    <LinearLayout
+
+    <Button
+            android:id="@+id/login_change_account"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@color/color_transparent"
+            android:text="@string/string_login_change_account"
+            android:textColor="@color/color_black"/>
+
+    <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/accountants_icon"
+            android:layout_centerHorizontal="true"
+            android:layout_above="@+id/login_username_display"/>
+
+    <TextView
+            android:id="@+id/login_username_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/login_edit_content"
+            android:layout_centerHorizontal="true"
+            android:text="QQ1350995917"/>
+
+    <LinearLayout
+            android:id="@+id/login_edit_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:orientation="vertical"
+            android:background="@drawable/login_edit"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="20dp"
             >
-        <ImageView
-                android:layout_width="match_parent"
+        <EditText
+                android:id="@+id/login_username"
+                android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
-                android:src="@drawable/accountants_icon"
-                />
-
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/string_login_username_hint"
+                android:drawableLeft="@drawable/login_username"
+                android:background="@drawable/login_input_bg"/>
+        <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@color/color_black_transparent_50"/>
+        <EditText
+                android:id="@+id/login_password"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:hint="@string/string_login_password_hint"
+                android:drawableLeft="@drawable/login_password"
+                android:background="@drawable/login_input_bg"/>
     </LinearLayout>
+
+    <Button
+            android:id="@+id/login_sure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:layout_below="@id/login_edit_content"
+            android:text="@string/string_login"
+            android:textColor="@color/color_write"/>
+
+    <Button
+            android:id="@+id/login_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@id/login_sure"
+            android:textColor="@color/color_write"
+            android:text="@string/string_register"/>
+    <Button
+            android:id="@+id/login_lost_password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/login_sure"
+            android:textColor="@color/color_write"
+            android:text="@string/string_lost_password"/>
+
+    <RelativeLayout
+            android:id="@+id/login_auth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/login_auth"
+            android:layout_alignParentBottom="true">
+        <CheckBox
+                android:id="@+id/login_auth_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:button="@drawable/selector_login_auth_status"/>
+
+        <TextView
+                android:id="@+id/login_auth_hint"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/login_auth_status"
+                android:text="@string/string_login_auth_hint"
+                android:visibility="gone"/>
+
+        <Button
+                android:id="@+id/login_auth_qq"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:background="@drawable/selector_login_auth_qq"/>
+
+        <Button
+                android:id="@+id/login_auth_wechat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/login_auth_qq"
+                android:scaleX="0.5"
+                android:scaleY="0.5"
+                android:background="@drawable/selector_login_auth_wechat"/>
+
+    </RelativeLayout>
+
 </RelativeLayout>

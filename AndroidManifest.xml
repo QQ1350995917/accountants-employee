@@ -20,7 +20,7 @@
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
             >
         <activity
-                android:name="org.maxwe.accountants.android.employee.mainboard.MainBoardActivity"
+                android:name="org.maxwe.accountants.android.employee.access.AccessActivity"
                 android:screenOrientation="portrait"
                 android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
                 android:configChanges="orientation|keyboardHidden" >
@@ -29,6 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name="org.maxwe.accountants.android.employee.mainboard.MainBoardActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
         <activity android:name="org.maxwe.accountants.android.employee.settings.SettingsActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 

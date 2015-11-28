@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import org.maxwe.accountants.android.employee.BaseActivity;
 import org.maxwe.accountants.android.employee.R;
+import sun.rmi.runtime.Log;
 
 /**
  * Created by Pengwei Ding on 2015-11-25 17:54.
@@ -17,6 +18,6 @@ public class AccessActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_access);
         FragmentManager fragmentManager = this.getSupportFragmentManager();
-        fragmentManager.beginTransaction().add(new LoginFragment(),null).commit();
+        fragmentManager.beginTransaction().replace(R.id.access_main,new LoginFragment(), LoginFragment.TAG).commit();
     }
 }
