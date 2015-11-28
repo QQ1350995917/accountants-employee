@@ -18,6 +18,11 @@
     <string name="string_login_password_hint">密码</string>
     <string name="string_login_auth_hint">使用其他帐号登录</string>
     <string name="string_login_change_account">切换帐号</string>
+    <string name="string_settings_origin_password_hint">原书密码</string>
+    <string name="string_settings_new_password_hint">新密码</string>
+    <string name="string_settings_new_password_repeat_hint">确认新密码</string>
+    <string name="string_settings_new_password_common">6-16个字符;由字母数字下划线组成,并且以英文字母开头</string>
+    <string name="string_settings_modify_password_sure">确认修改</string>
 
 
 </resources>

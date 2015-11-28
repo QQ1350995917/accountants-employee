@@ -3,6 +3,7 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent"
               android:orientation="vertical"
+              android:id="@+id/settings_container"
               android:background="@color/color_write_transparent_50"
         >
 
@@ -19,7 +20,7 @@
                 android:orientation="vertical"
                 android:background="@color/color_write_transparent_50"
                 >
-            <RelativeLayout style="@style/style_settings_item" android:id="@+id/settings_item_password_modify">
+            <RelativeLayout style="@style/style_settings_item" android:id="@+id/settings_item_password_modify" android:clickable="true">
                 <TextView style="@style/style_settings_item_text" android:text="@string/string_password_modify"/>
 
                 <ImageButton

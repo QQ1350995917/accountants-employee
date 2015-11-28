@@ -1,10 +1,12 @@
 package org.maxwe.accountants.android.employee.settings;
 
 import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.*;
 import org.maxwe.accountants.android.employee.BaseActivity;
 import org.maxwe.accountants.android.employee.R;
+import org.maxwe.accountants.android.employee.access.LoginFragment;
 
 /**
  * Created by Pengwei Ding on 2015-11-25 14:23.
@@ -31,9 +33,14 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        RelativeLayout item = (RelativeLayout) v;
-        TextView childAt = (TextView) item.getChildAt(0);
-        float textSize = childAt.getTextSize();
-        Toast.makeText(this,"" + textSize,Toast.LENGTH_SHORT).show();
+        int id = v.getId();
+        if (R.id.settings_item_password_modify == id){
+            FragmentManager fragmentManager = this.getSupportFragmentManager();
+            fragmentManager.beginTransaction().replace(R.id.settings_container,new ModifyPasswordFragment(), ModifyPasswordFragment.TAG).commit();
+        }
+//        RelativeLayout item = (RelativeLayout) v;
+//        TextView childAt = (TextView) item.getChildAt(0);
+//        float textSize = childAt.getTextSize();
+//        Toast.makeText(this,"" + textSize,Toast.LENGTH_SHORT).show();
     }
 }
