@@ -70,11 +70,12 @@
     <Button
             android:id="@+id/login_sure"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_margin="15dp"
             android:layout_below="@id/login_edit_content"
             android:text="@string/string_login"
-            android:textColor="@color/color_write"/>
+            android:textColor="@color/color_write"
+            android:background="@color/color_black"/>
 
     <Button
             android:id="@+id/login_register"
@@ -85,7 +86,8 @@
             android:layout_alignParentLeft="true"
             android:layout_below="@id/login_sure"
             android:textColor="@color/color_write"
-            android:text="@string/string_register"/>
+            android:text="@string/string_register"
+            android:background="@color/color_transparent"/>
     <Button
             android:id="@+id/login_lost_password"
             android:layout_width="wrap_content"
@@ -95,12 +97,13 @@
             android:layout_alignParentRight="true"
             android:layout_below="@id/login_sure"
             android:textColor="@color/color_write"
-            android:text="@string/string_lost_password"/>
+            android:text="@string/string_lost_password"
+            android:background="@color/color_transparent"/>
 
     <RelativeLayout
             android:id="@+id/login_auth"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="90dp"
             android:background="@drawable/login_auth"
             android:layout_alignParentBottom="true">
         <CheckBox
@@ -123,7 +126,6 @@
                 android:id="@+id/login_auth_qq"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:scaleX="0.5"
                 android:scaleY="0.5"
                 android:background="@drawable/selector_login_auth_qq"/>
@@ -132,7 +134,6 @@
                 android:id="@+id/login_auth_wechat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_toRightOf="@id/login_auth_qq"
                 android:scaleX="0.5"

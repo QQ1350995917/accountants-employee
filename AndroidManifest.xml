@@ -29,7 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="org.maxwe.accountants.android.employee.mainboard.MainBoardActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+        <activity android:name="org.maxwe.accountants.android.employee.mainboard.MainBoardActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:launchMode="singleTop"></activity>
         <activity android:name="org.maxwe.accountants.android.employee.settings.SettingsActivity" android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
     </application>
 
