@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_write_transparent_50"
+        >
+    <LinearLayout
+            android:id="@+id/settings_item_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/color_write_transparent_50"
+            >
+        <RelativeLayout style="@style/style_settings_item" android:id="@+id/settings_item_password_modify"
+                        android:clickable="true">
+            <TextView style="@style/style_settings_item_text" android:text="@string/string_password_modify"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_transparent"
+                    android:src="@drawable/icon_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/style_settings_item">
+            <TextView style="@style/style_settings_item_text" android:text="@string/string_clean_cache"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_transparent"
+                    android:src="@drawable/icon_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/style_settings_item">
+            <TextView style="@style/style_settings_item_text" android:text="@string/string_update_version"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_transparent"
+                    android:src="@drawable/icon_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout style="@style/style_settings_item">
+            <TextView style="@style/style_settings_item_text" android:text="@string/string_qr"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_transparent"
+                    android:src="@drawable/icon_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/settings_about" style="@style/style_settings_item">
+            <TextView style="@style/style_settings_item_text" android:text="@string/string_about"/>
+
+            <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_transparent"
+                    android:src="@drawable/icon_right"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:id="@+id/settings_item_logout" style="@style/style_settings_item"
+                        android:background="#FF0000">
+            <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@color/color_transparent"
+                    android:text="@string/string_logout"
+                    android:textColor="@color/color_write"
+                    android:textSize="20sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>

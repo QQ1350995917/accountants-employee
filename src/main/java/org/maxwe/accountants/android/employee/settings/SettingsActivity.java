@@ -4,11 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import org.maxwe.accountants.android.employee.BaseActivity;
 import org.maxwe.accountants.android.employee.R;
-import org.maxwe.accountants.android.employee.access.AccessActivity;
 
 /**
  * Created by Pengwei Ding on 2015-11-25 14:23.
@@ -17,25 +16,20 @@ import org.maxwe.accountants.android.employee.access.AccessActivity;
  */
 public class SettingsActivity extends BaseActivity implements View.OnClickListener {
 
-    private LinearLayout settings_container;
+    private FrameLayout settings_container;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.setContentView(R.layout.activity_settings);
-
-        this.settings_container = (LinearLayout) this.findViewById(R.id.settings_container);
-
+        this.settings_container = (FrameLayout) this.findViewById(R.id.settings_container);
         ImageView backView = (ImageView) this.findViewById(R.id.title_back);
         backView.setVisibility(View.VISIBLE);
         backView.setOnClickListener(this);
 
-        LinearLayout settings_item_container = (LinearLayout) this.findViewById(R.id.settings_item_container);
-        for (int index = 0; index < settings_item_container.getChildCount(); index++) {
-            View item = settings_item_container.getChildAt(index);
-            item.setClickable(true);
-            item.setOnClickListener(this);
-        }
+        FragmentManager fragmentManager = this.getSupportFragmentManager();
+        fragmentManager.beginTransaction().replace(R.id.settings_container,new ItemListFragment(), ItemListFragment.TAG).commit();
+
     }
 
     @Override
@@ -47,14 +41,6 @@ public class SettingsActivity extends BaseActivity implements View.OnClickListen
     public void onClick(View v) {
         int id = v.getId();
         if (R.id.title_back == id) {
-            this.finish();
-        } else if (R.id.settings_item_password_modify == id) {
-            this.settings_container.removeAllViews();
-            FragmentManager fragmentManager = this.getSupportFragmentManager();
-            fragmentManager.beginTransaction().add(R.id.settings_container,new ModifyPasswordFragment(), ModifyPasswordFragment.TAG).commit();
-        } else if (R.id.settings_item_logout == id) {
-            Intent intent = new Intent(this, AccessActivity.class);
-            this.startActivity(intent);
             this.finish();
         }
 //        RelativeLayout item = (RelativeLayout) v;
